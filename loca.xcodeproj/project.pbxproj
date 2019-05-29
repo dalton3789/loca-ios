@@ -19,6 +19,11 @@
 		E86FA679229940FA000BF9D6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA678229940FA000BF9D6 /* MainNavigationController.swift */; };
 		E86FA67B2299436B000BF9D6 /* ProjectListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA67A2299436B000BF9D6 /* ProjectListTableViewController.swift */; };
 		E86FA67E2299475C000BF9D6 /* SharedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA67D2299475C000BF9D6 /* SharedActions.swift */; };
+		E877E31B229E7B61002AB4B8 /* ServerCominucation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E31A229E7B61002AB4B8 /* ServerCominucation.swift */; };
+		E877E31E229E7C7A002AB4B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E31D229E7C7A002AB4B8 /* User.swift */; };
+		E877E320229E7D6B002AB4B8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E31F229E7D6B002AB4B8 /* Project.swift */; };
+		E877E322229E80F1002AB4B8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E321229E80F1002AB4B8 /* Config.swift */; };
+		E877E324229E8FA0002AB4B8 /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */; };
 		E8DD45B02299797E006B33C3 /* FlatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD45AF2299797E006B33C3 /* FlatDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,11 @@
 		E86FA678229940FA000BF9D6 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		E86FA67A2299436B000BF9D6 /* ProjectListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListTableViewController.swift; sourceTree = "<group>"; };
 		E86FA67D2299475C000BF9D6 /* SharedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedActions.swift; sourceTree = "<group>"; };
+		E877E31A229E7B61002AB4B8 /* ServerCominucation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerCominucation.swift; sourceTree = "<group>"; };
+		E877E31D229E7C7A002AB4B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E877E31F229E7D6B002AB4B8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		E877E321229E80F1002AB4B8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
 		E8DD45AF2299797E006B33C3 /* FlatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +119,7 @@
 		E86FA642229939DE000BF9D6 /* loca */ = {
 			isa = PBXGroup;
 			children = (
+				E877E31C229E7C45002AB4B8 /* Model */,
 				E86FA67C22994741000BF9D6 /* Common */,
 				E86FA67422993A68000BF9D6 /* Controllers */,
 				E86FA643229939DE000BF9D6 /* AppDelegate.swift */,
@@ -162,9 +173,21 @@
 		E86FA67C22994741000BF9D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E877E31A229E7B61002AB4B8 /* ServerCominucation.swift */,
 				E86FA67D2299475C000BF9D6 /* SharedActions.swift */,
+				E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */,
+				E877E321229E80F1002AB4B8 /* Config.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E877E31C229E7C45002AB4B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E877E31D229E7C7A002AB4B8 /* User.swift */,
+				E877E31F229E7D6B002AB4B8 /* Project.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,10 +324,15 @@
 				E86FA67E2299475C000BF9D6 /* SharedActions.swift in Sources */,
 				E86FA679229940FA000BF9D6 /* MainNavigationController.swift in Sources */,
 				E8DD45B02299797E006B33C3 /* FlatDetailViewController.swift in Sources */,
+				E877E31B229E7B61002AB4B8 /* ServerCominucation.swift in Sources */,
 				E86FA646229939DE000BF9D6 /* ViewController.swift in Sources */,
+				E877E322229E80F1002AB4B8 /* Config.swift in Sources */,
 				E86FA64C229939DE000BF9D6 /* loca.xcdatamodeld in Sources */,
 				E86FA67B2299436B000BF9D6 /* ProjectListTableViewController.swift in Sources */,
+				E877E320229E7D6B002AB4B8 /* Project.swift in Sources */,
 				E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */,
+				E877E324229E8FA0002AB4B8 /* CustomIndicator.swift in Sources */,
+				E877E31E229E7C7A002AB4B8 /* User.swift in Sources */,
 				E86FA67622993A78000BF9D6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

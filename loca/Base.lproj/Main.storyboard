@@ -45,11 +45,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="project" id="69i-WS-TJJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="project" id="69i-WS-TJJ">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="69i-WS-TJJ" id="IL9-8D-aCS">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -208,6 +208,26 @@
                                                 <constraint firstAttribute="bottom" secondItem="zta-dM-IXs" secondAttribute="bottom" id="cHo-Sc-LZk"/>
                                                 <constraint firstItem="CdJ-8c-pGY" firstAttribute="top" secondItem="lyC-TM-JXo" secondAttribute="top" id="tjJ-Oo-Q5P"/>
                                                 <constraint firstItem="zta-dM-IXs" firstAttribute="leading" secondItem="lyC-TM-JXo" secondAttribute="leading" id="uWa-Qd-iot"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="overview" rowHeight="177" id="0o1-nS-LV6">
+                                        <rect key="frame" x="0.0" y="143.5" width="414" height="177"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0o1-nS-LV6" id="ezT-ra-Iun">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-hJ-Hop">
+                                                    <rect key="frame" x="184" y="73.5" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JGx-hJ-Hop" firstAttribute="centerX" secondItem="ezT-ra-Iun" secondAttribute="centerX" id="Eez-pj-Wgq"/>
+                                                <constraint firstItem="JGx-hJ-Hop" firstAttribute="centerY" secondItem="ezT-ra-Iun" secondAttribute="centerY" id="fbz-kO-AXG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

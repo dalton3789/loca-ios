@@ -14,6 +14,7 @@ class FlatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var table: UITableView!
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,12 @@ class FlatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc func close(){
-        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.popViewController(animated: true)
     }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,6 +44,11 @@ class FlatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
            cell = tableView.dequeueReusableCell(withIdentifier: "header")!
             return cell
         }
+        if indexPath.row == 2 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "overview")!
+            cell.isUserInteractionEnabled = true
+            return cell
+        }
         cell = tableView.dequeueReusableCell(withIdentifier: "header")!
         return cell
     }
@@ -50,5 +56,13 @@ class FlatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
 
 }

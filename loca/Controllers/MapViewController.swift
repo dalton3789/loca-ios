@@ -19,27 +19,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var listAnnotation = [MakerAnnotation]()
     var defaultLocation = CLLocation()
     let sharedActions = SharedActions()
+    let server = Server()
+    var project = Project()
+    var apartmentList = [Config.apartment]()
+    let cIndicator = CustomIndicator()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        map.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        cIndicator.addIndicator(view: self, alpha: 1.0)
+        cIndicator.startIndicator(timeout: 10.0)
         
-        let defaultCoordinate = CLLocationCoordinate2D(latitude: 10.726244, longitude: 106.712437)
-        let annotation = MakerAnnotation(coordinate: defaultCoordinate, title: "Căn 022", subTitle: "Dự án Phú Gia - Khu Phú Mỹ Hưng ")
-        listAnnotation.append(annotation)
-        listAnnotation.append(MakerAnnotation(coordinate: CLLocationCoordinate2D(latitude: 10.726262,  longitude: 106.712601), title: "Căn 021", subTitle: "Dự án Phú Gia - Khu Phú Mỹ Hưng "))
-        listAnnotation.append(MakerAnnotation(coordinate: CLLocationCoordinate2D(latitude: 10.724807,  longitude: 106.715308), title: "Căn 221", subTitle: "Dự án Phú Gia - Khu Phú Mỹ Hưng "))
-        
-        
-        for i in listAnnotation {
-            map.addAnnotation(i)
-        }
-        
-        map.setRegion(annotation.region, animated: true)
-        map.delegate = self
-        map.showsUserLocation = true
+        getApartmentFromProject()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.showMoreActions(touch:)))
         tap.numberOfTapsRequired = 1
@@ -47,16 +39,73 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getApartmentFromProject(){
+        let link = Config.host + "/api/apartments?id=" + String(self.project.id)
+        server.sendGETRequest(link: link, completionhandler: {data in
+            self.getApartmentInfo(result: data)
+        })
     }
-    */
+    
+    func addMarker(){
+        map.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        for apartment in apartmentList {
+            let anotation = MakerAnnotation(coordinate: CLLocationCoordinate2D(latitude: (apartment.latitude as NSString).doubleValue,  longitude: (apartment.longitude as NSString).doubleValue), title: "Căn " + apartment.addressNumber, subTitle: "Dự án " + project.name!)
+            map.addAnnotation(anotation)
+        }
+        
+        let defaultCoordinate = CLLocationCoordinate2D(latitude: Double(project.latitude!)!, longitude: Double(project.longitude!)!)
+        let annotation = MakerAnnotation(coordinate: defaultCoordinate, title: "", subTitle: "")
+        
+        map.setRegion(annotation.region, animated: true)
+        map.delegate = self
+        map.showsUserLocation = true
+        
+    }
+
+    func getApartmentInfo(result : String){
+        let data = result.data(using: .utf8)!
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+            {
+                
+                for event in jsonArray {
+                    
+                    let legalStatus = event["legalStatus"] as! String
+                    let longitude = event["longitude"] as! String
+                    let id = event["id"] as! Int
+                    let latitude = event["latitude"] as! String
+                    let addressNumber = event["addressNumber"] as! String
+                    /*let area = event["addressarea"] as! String
+                    let ward = event["ward"] as! String
+                    let district = event["district"] as! String
+                    let city = event["city"] as! String
+                    let street = event["street"] as! String
+                    */
+                    var apartment = Config.apartment()
+                    apartment.id = id
+                    apartment.legalStatus = legalStatus
+                    apartment.longitude = longitude
+                    apartment.latitude = latitude
+                    apartment.addressNumber = addressNumber
+                    self.apartmentList.append(apartment)
+                    
+                }
+                
+                DispatchQueue.main.async{
+                    self.addMarker()
+                    self.cIndicator.stopIndicator()
+                }
+                
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
+    
     @objc func showMoreActions(touch: UITapGestureRecognizer) {
         DynamicView.removeFromSuperview()
         touchPoint = touch.location(in: self.view)
