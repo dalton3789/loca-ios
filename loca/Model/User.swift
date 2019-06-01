@@ -64,5 +64,18 @@ class UserData {
         
     }
     
+    public func GetUser() -> [User]{
+        do{
+            
+            try userArray = context.fetch(User.fetchRequest())
+        }
+        catch{
+            print(error)
+        }
+        
+        return userArray
+        
+    }
+    
     
 }

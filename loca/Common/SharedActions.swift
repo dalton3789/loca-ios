@@ -53,7 +53,7 @@ class SharedActions {
         view.layer.backgroundColor = UIColor.white.cgColor
         
         view.layer.masksToBounds = false
-        view.layer.shadowColor = UIColor.gray.cgColor
+        view.layer.shadowColor = UITableView().separatorColor?.cgColor
         view.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         view.layer.shadowOpacity = 1.0
         view.layer.shadowRadius = 0.0
@@ -68,6 +68,12 @@ class SharedActions {
         view.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         view.layer.shadowOpacity = 1.0
         view.layer.shadowRadius = 0.0
+    }
+    
+    public func setBorder(view: UIView){
+        view.layer.masksToBounds = true
+        view.layer.borderColor = UITableView().separatorColor?.cgColor
+        view.layer.borderWidth = 1.0
     }
     
     
@@ -216,6 +222,27 @@ class SharedActions {
         
         // show the alert
         view.present(alert, animated: true, completion: nil)
+    }
+    
+    func showPremiumAccountError(view : UIViewController, title : String , alert : String, confirmAction: @escaping () -> () ){
+        
+        let alert = UIAlertController(title: title, message: alert, preferredStyle: UIAlertController.Style.actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
+            action in
+            let viewBlank = UIView(frame: CGRect(x: 0, y: 0, width: view.view.frame.width, height: view.view.frame.height))
+            view.view.addSubview(viewBlank)
+            view.view.bringSubviewToFront(viewBlank)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {
+            action in
+            confirmAction()
+        }))
+        
+        // show the alert
+        view.present(alert, animated: true, completion: nil)
+        
     }
     
 }
