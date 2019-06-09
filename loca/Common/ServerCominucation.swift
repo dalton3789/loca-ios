@@ -43,6 +43,47 @@ class Server {
 
     }
     
+    public func sendHTTPrequsetWithData(_ data: [String:Any], _ link : String, complitionHandler : @escaping (String)->()){
+        
+        var request = URLRequest(url: URL(string: link)!)
+        
+        let username = "tri@gmail.com"
+        let password = "aAa123"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        
+        
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        request.httpBody = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+        
+        print(request.httpBody!.base64EncodedString())
+        URLSession.shared.dataTask(with:request, completionHandler: {(data, response, error) in
+            print (NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
+            if error != nil {
+                print(error ?? "")
+            } else {
+                do {
+                    /*
+                    guard let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] else { return }
+                    */
+                  
+                    
+                    let dataReceived = data! as NSData
+                    let dataString = NSString(data: dataReceived as Data,encoding : String.Encoding.utf8.rawValue)! as String
+                    complitionHandler(dataString)
+                    
+                }
+            }
+        }).resume()
+        
+    }
+    
+    
     func sendHTTPrequsetWitouthData(_ link: String) -> String {
         var url : URL?
         if let encoded = link.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
@@ -118,6 +159,40 @@ class Server {
         }).resume()
     }
     
+    
+    func sendPOSTRequest(link : String, completionhandler : @escaping (String)->() ) {
+        self.dataString = ""
+        let username = "tri@gmail.com"
+        let password = "aAa123"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        
+        var request = URLRequest(url: URL(string: link)!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        //request.httpBody = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+        
+        //print(request.httpBody!.base64EncodedString())
+        URLSession.shared.dataTask(with:request, completionHandler: {(data, response, error) in
+            //print (NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
+            if error != nil {
+                print(error ?? "")
+            } else {
+                do {
+                    
+                    let  dataReceived = data! as NSData
+                    
+                    self.dataString = NSString(data: dataReceived as Data,encoding : String.Encoding.utf8.rawValue)! as String
+                    completionhandler(self.dataString)
+                    
+                }
+            }
+        }).resume()
+    }
     
     
 }

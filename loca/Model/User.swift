@@ -66,15 +66,28 @@ class UserData {
     
     public func GetUser() -> [User]{
         do{
-            
             try userArray = context.fetch(User.fetchRequest())
         }
         catch{
             print(error)
         }
-        
         return userArray
         
+    }
+    
+    public func DeleteAllUser(){
+        do{
+            
+            try userArray = context.fetch(User.fetchRequest())
+            for user in userArray as [NSManagedObject] {
+                
+                context.delete(user)
+            }
+            try context.save()
+        }
+        catch{
+            print(error)
+        }
     }
     
     
