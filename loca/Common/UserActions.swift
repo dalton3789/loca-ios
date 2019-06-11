@@ -29,9 +29,11 @@ public class UserAction{
             
             let link = Config.host + "/api/checkpremium?id=" + String(id)
             
-            Server().sendGETRequest(link: link, completionhandler: {result in })
+            Server().sendGETRequest(link: link, completionhandler: {result in
+                let user = userData.GetUser().first!
+                user.isPremium = Bool(result)!
+                userData.UpdateUser(user)
+            })
         }
-        
     }
-
 }

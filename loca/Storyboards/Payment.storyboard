@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Wax-dQ-kZf">
+            <objects>
+                <navigationController storyboardIdentifier="payment_storyboard" id="wiB-rd-eAT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ROA-hg-BRp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eGc-cm-fSn" kind="relationship" relationship="rootViewController" id="i1I-6k-KQu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHd-03-r6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-536" y="62"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="oCf-xO-veJ">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eGc-cm-fSn" customClass="PaymentViewController" customModule="loca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VaJ-0R-Baj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ht3-iN-5uA">
+                                <rect key="frame" x="0.0" y="224" width="414" height="448"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dbM-Qe-Xgd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQj-vz-WAr">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pqi-7h-2RR">
+                                        <rect key="frame" x="0.0" y="228" width="414" height="220"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urK-Te-xLY">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pqi-7h-2RR" firstAttribute="height" secondItem="dbM-Qe-Xgd" secondAttribute="height" id="aJa-6K-miT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ht3-iN-5uA" firstAttribute="centerX" secondItem="VaJ-0R-Baj" secondAttribute="centerX" id="0vp-kh-XVq"/>
+                            <constraint firstItem="ht3-iN-5uA" firstAttribute="width" secondItem="VaJ-0R-Baj" secondAttribute="width" id="Eqc-cb-Iwp"/>
+                            <constraint firstItem="ht3-iN-5uA" firstAttribute="height" secondItem="VaJ-0R-Baj" secondAttribute="height" multiplier="0.5" id="aR8-in-Oa6"/>
+                            <constraint firstItem="ht3-iN-5uA" firstAttribute="centerY" secondItem="VaJ-0R-Baj" secondAttribute="centerY" id="yJp-wP-w1g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7oZ-kf-pGw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ig3-bK-uD1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECZ-PC-ReD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="62"/>
+        </scene>
+    </scenes>
+</document>

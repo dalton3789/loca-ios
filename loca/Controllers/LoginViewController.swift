@@ -44,21 +44,13 @@ class LoginViewController: UIViewController {
             server.sendHTTPrequsetWithData(data, link, complitionHandler: {result in
                 self.getUserDetail(result: result)
         })*/
-            getUserDetail(result : "")
-        }
-    }
-    
-    func getUserDetail(result : String){
-        
-        let data = result.data(using: .utf8)!
-        do {
-            let user = UserData()
-            
-            let jsonString = """
+            getUserDetail(result : """
             {
                 "name": "Durian",
                 "id": 600,
-                "isPremium": "free",
+                "account" : "free",
+                "isPremium": false,
+                "password": "abc",
                 "photos" : [
                         {
                     "link": "1",
@@ -70,12 +62,23 @@ class LoginViewController: UIViewController {
                     }
                 ]
             }
-            """
-            let jsonData = jsonString.data(using: .utf8)!
+            """)
+        }
+    }
+    
+    func getUserDetail(result : String){
+        
+        let data = result.data(using: .utf8)!
+        do {
+            let user = UserData()
             let decoder = JSONDecoder()
-            let myStruct = try decoder.decode(UserData.userStruct.self, from: jsonData)
+            var myStruct = try decoder.decode(UserData.userStruct.self, from: data)
+            myStruct.isPremium = (myStruct.account == "free") ? false : true
+            print(myStruct)
             
-            print(myStruct.photos.first?.link)
+            user.DeleteAllUser()
+            
+            user.AddUser(myStruct.name, myStruct.id, myStruct.password!, "customer", myStruct.isPremium!)
             /*
             if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>] {
                 user.DeleteAllUser()

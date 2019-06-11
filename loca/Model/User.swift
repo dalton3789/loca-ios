@@ -16,13 +16,13 @@ class UserData {
     var userArray :[User] = []
     var user : User?
     
-    public func AddUser(_ name: String, _ id: Int, _ email : String, _ password : String, _ role : String) {
+    public func AddUser(_ name: String, _ id: Int, _ password : String, _ role : String, _ isPremium : Bool) {
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
         newUser.setValue(name, forKey: "name")
         newUser.setValue(id, forKey: "id")
-        newUser.setValue(email, forKey: "email")
         newUser.setValue(password, forKey: "password")
         newUser.setValue(role, forKey: "role")
+        newUser.setValue(isPremium, forKey: "isPremium")
         
         do {
             try context.save()
@@ -93,7 +93,8 @@ class UserData {
     struct userStruct : Codable {
         var name : String
         var id : Int
-        var isPremium : String
+        var isPremium : Bool?
+        var account : String
         var role : String?
         var password : String?
         var photos : [photos]

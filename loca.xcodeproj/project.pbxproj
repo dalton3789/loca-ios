@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1A0AE822AFA21600434692 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1A0AE722AFA21600434692 /* Payment.storyboard */; };
+		1F1A0AEB22AFA3A800434692 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A0AEA22AFA3A800434692 /* PaymentViewController.swift */; };
 		1FCEEC7322AF53E000E1C1C8 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */; };
 		E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA643229939DE000BF9D6 /* AppDelegate.swift */; };
 		E86FA646229939DE000BF9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA645229939DE000BF9D6 /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1A0AE722AFA21600434692 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		1F1A0AEA22AFA3A800434692 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		E86FA640229939DE000BF9D6 /* loca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86FA643229939DE000BF9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1A0AE622AFA1F500434692 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A0AE722AFA21600434692 /* Payment.storyboard */,
+				E86FA647229939DE000BF9D6 /* Main.storyboard */,
+				E86FA64F229939DF000BF9D6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1F1A0AE922AFA30C00434692 /* payment */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A0AEA22AFA3A800434692 /* PaymentViewController.swift */,
+			);
+			path = payment;
+			sourceTree = "<group>";
+		};
 		E86FA637229939DE000BF9D6 = {
 			isa = PBXGroup;
 			children = (
@@ -139,15 +161,14 @@
 		E86FA642229939DE000BF9D6 /* loca */ = {
 			isa = PBXGroup;
 			children = (
+				1F1A0AE622AFA1F500434692 /* Storyboards */,
 				E8EAB76122A15575004534FE /* Views */,
 				E877E31C229E7C45002AB4B8 /* Model */,
 				E86FA67C22994741000BF9D6 /* Common */,
 				E86FA67422993A68000BF9D6 /* Controllers */,
 				E86FA643229939DE000BF9D6 /* AppDelegate.swift */,
 				E86FA645229939DE000BF9D6 /* ViewController.swift */,
-				E86FA647229939DE000BF9D6 /* Main.storyboard */,
 				E86FA64D229939DF000BF9D6 /* Assets.xcassets */,
-				E86FA64F229939DF000BF9D6 /* LaunchScreen.storyboard */,
 				E86FA652229939DF000BF9D6 /* Info.plist */,
 				E86FA64A229939DE000BF9D6 /* loca.xcdatamodeld */,
 			);
@@ -175,6 +196,7 @@
 		E86FA67422993A68000BF9D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1F1A0AE922AFA30C00434692 /* payment */,
 				E8F7B64B22A2180800463D13 /* apartment */,
 				E86FA677229940D3000BF9D6 /* Navigation Controllers */,
 				E86FA67522993A78000BF9D6 /* MapViewController.swift */,
@@ -351,6 +373,7 @@
 				E86FA651229939DF000BF9D6 /* LaunchScreen.storyboard in Resources */,
 				E86FA64E229939DF000BF9D6 /* Assets.xcassets in Resources */,
 				E86FA649229939DE000BF9D6 /* Main.storyboard in Resources */,
+				1F1A0AE822AFA21600434692 /* Payment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +417,7 @@
 				E877E320229E7D6B002AB4B8 /* Project.swift in Sources */,
 				E8E066A322A555A00094D3A7 /* SignUpViewController.swift in Sources */,
 				E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */,
+				1F1A0AEB22AFA3A800434692 /* PaymentViewController.swift in Sources */,
 				E877E324229E8FA0002AB4B8 /* CustomIndicator.swift in Sources */,
 				E8F7B64F22A2189F00463D13 /* ApartmentBasicTableViewCell.swift in Sources */,
 				E877E31E229E7C7A002AB4B8 /* User.swift in Sources */,

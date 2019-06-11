@@ -130,6 +130,14 @@
                                     <segue destination="5nZ-4V-9Ba" kind="show" id="CtY-pM-vlN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-tC-aiH">
+                                <rect key="frame" x="184" y="485" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="IX9-Pc-fXD" kind="show" id="YcF-L2-LzU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -165,6 +173,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ls4-rk-5Gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2252" y="700"/>
+        </scene>
+        <!--payment_storyboard-->
+        <scene sceneID="Z1d-C0-I7Y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" referencedIdentifier="payment_storyboard" id="IX9-Pc-fXD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfR-46-d8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1824" y="1084"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="EcW-ps-KES">
