@@ -37,13 +37,14 @@ class LoginViewController: UIViewController {
         else if txt_password.text == "" {
         shareAction.showErrorToast(message: "Password không được trống", view: self.view, startY: txt_password.frame.minY, endY: txt_password.frame.minY - 50)
         } else{
+            /*
             let data = ["email" : txt_username.text!, "password" : txt_password.text!] as [String:Any]
             let link = Config.host + "/api/login"
            
             server.sendHTTPrequsetWithData(data, link, complitionHandler: {result in
                 self.getUserDetail(result: result)
-        })
-            
+        })*/
+            getUserDetail(result : "")
         }
     }
     
@@ -53,7 +54,29 @@ class LoginViewController: UIViewController {
         do {
             let user = UserData()
             
+            let jsonString = """
+            {
+                "name": "Durian",
+                "id": 600,
+                "isPremium": "free",
+                "photos" : [
+                        {
+                    "link": "1",
+                    "id" : 1
+                    },
+                    {
+                    "link": "2",
+                    "id" : 2
+                    }
+                ]
+            }
+            """
+            let jsonData = jsonString.data(using: .utf8)!
+            let decoder = JSONDecoder()
+            let myStruct = try decoder.decode(UserData.userStruct.self, from: jsonData)
             
+            print(myStruct.photos.first?.link)
+            /*
             if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>] {
                 user.DeleteAllUser()
                 for event in jsonArray {
@@ -66,7 +89,7 @@ class LoginViewController: UIViewController {
                     
                     user.AddUser(name, id, email, password, role)
                 }
-                
+ 
                 DispatchQueue.main.async{
                     
                 }
@@ -76,8 +99,8 @@ class LoginViewController: UIViewController {
                 DispatchQueue.main.async{
                     self.shareAction.showErrorToast(message: "Lỗi! Vui lòng thử lại sau", view: self.view, startY: 40, endY: 90)
                 }
-                
-            }
+ 
+            }*/
         } catch let error as NSError {
             print(error)
             DispatchQueue.main.async{

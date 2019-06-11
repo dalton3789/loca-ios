@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FCEEC7322AF53E000E1C1C8 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */; };
 		E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA643229939DE000BF9D6 /* AppDelegate.swift */; };
 		E86FA646229939DE000BF9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA645229939DE000BF9D6 /* ViewController.swift */; };
 		E86FA649229939DE000BF9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86FA647229939DE000BF9D6 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		E86FA640229939DE000BF9D6 /* loca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86FA643229939DE000BF9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E86FA645229939DE000BF9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				E877E31D229E7C7A002AB4B8 /* User.swift */,
 				E877E31F229E7D6B002AB4B8 /* Project.swift */,
+				1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				E8F7B65722A232C400463D13 /* ApartmentPremiumViewController.swift in Sources */,
 				E877E31B229E7B61002AB4B8 /* ServerCominucation.swift in Sources */,
 				E8F7B65922A237F500463D13 /* ApartmentContactTableViewCell.swift in Sources */,
+				1FCEEC7322AF53E000E1C1C8 /* Apartment.swift in Sources */,
 				E8F7B64D22A2183800463D13 /* ApartmentBasicViewController.swift in Sources */,
 				E86FA646229939DE000BF9D6 /* ViewController.swift in Sources */,
 				E8E066A522A5587E0094D3A7 /* LoginNavigationController.swift in Sources */,

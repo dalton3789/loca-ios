@@ -103,6 +103,20 @@ class ProjectData {
         
     }
     
+    struct projectStruct : Codable {
+        var name : String
+        var id : Int
+        var longitude : String
+        var lattitude : String
+        var addressNumber : String?
+        var street : String?
+        var area : String?
+        var ward : String?
+        var district : String?
+        var city : String?
+        
+    }
+    
     
     
 }

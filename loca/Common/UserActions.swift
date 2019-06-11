@@ -21,5 +21,17 @@ public class UserAction{
         }
         
     }
+    
+    class func checkPremiumAccount() {
+        let userData = UserData()
+        if userData.GetUser().count > 0 {
+            let id = (UserData().GetUser().first?.id)!
+            
+            let link = Config.host + "/api/checkpremium?id=" + String(id)
+            
+            Server().sendGETRequest(link: link, completionhandler: {result in })
+        }
+        
+    }
 
 }

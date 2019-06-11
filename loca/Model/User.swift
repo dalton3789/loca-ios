@@ -90,5 +90,18 @@ class UserData {
         }
     }
     
+    struct userStruct : Codable {
+        var name : String
+        var id : Int
+        var isPremium : String
+        var role : String?
+        var password : String?
+        var photos : [photos]
+    }
     
+    struct photos : Codable {
+        var link : String
+        var id : Int
+        
+    }
 }
