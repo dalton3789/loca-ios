@@ -20,11 +20,11 @@ class ProjectListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         cIndicator.addIndicator(view: self, alpha: 1.0)
         cIndicator.startIndicator(timeout: 10.0)
         getProjectsFromServer()
- */
+ 
 
     }
     
@@ -98,16 +98,15 @@ class ProjectListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //return self.projects.count
-        return 1
+        return self.projects.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
         
-        //cell.textLabel?.text = projects[indexPath.row].name
-        cell.textLabel?.text = "Data"
+        cell.textLabel?.text = projects[indexPath.row].name
+        //cell.textLabel?.text = "Data"
         cell.textLabel?.textColor = sharedActions.hexStringToUIColor(hex: "#696969")
         return cell
     }

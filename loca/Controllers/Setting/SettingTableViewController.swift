@@ -75,7 +75,7 @@ class SettingTableViewController: UITableViewController {
         
         // Create second button
         let buttonTwo = DefaultButton(title: "XÁC NHẬN", height: 60) {
-            if ratingVC.txt_newpass.text != ratingVC.txt_confirmnewpass.text {
+            if ratingVC.txt_reconfirmpass.text != ratingVC.txt_confirmpass.text {
                 self.showStandardDialog(title: "Password khong khop", subTitle: "Vui long nhap khop password moi")
             }
         }

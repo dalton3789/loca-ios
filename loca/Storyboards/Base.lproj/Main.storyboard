@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gov-yz-nRe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t6L-qe-bRq">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0044527440331876278" green="0.31533017754554749" blue="0.55339938402175903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0044527440330000001" green="0.31533017749999998" blue="0.55339938399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +63,7 @@
                             <outlet property="delegate" destination="OTm-yV-MRF" id="8dP-aP-Grw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="eT2-gZ-Ptj"/>
+                    <tabBarItem key="tabBarItem" title="Dự Án" image="project_icon" id="eT2-gZ-Ptj"/>
                     <navigationItem key="navigationItem" title="Danh Sách Dự Án" id="fqi-ou-md5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc8-yG-cKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +127,7 @@
                                 <rect key="frame" x="16" y="253" width="382" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-GX-vRt">
                                 <rect key="frame" x="40" y="333" width="334" height="33"/>
@@ -148,14 +149,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="5nZ-4V-9Ba" kind="show" id="CtY-pM-vlN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boi-tC-aiH">
-                                <rect key="frame" x="184" y="485" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="IX9-Pc-fXD" kind="show" id="YcF-L2-LzU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,19 +181,12 @@
                         <outlet property="btn_register" destination="M5y-sM-i4F" id="36X-R9-paX"/>
                         <outlet property="txt_password" destination="VyB-Hh-8gf" id="dqU-lU-RMN"/>
                         <outlet property="txt_username" destination="mLY-jj-87G" id="zAD-0i-mCd"/>
+                        <segue destination="Gov-yz-nRe" kind="show" identifier="login_home" id="Xbq-L3-4VC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ls4-rk-5Gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2252" y="700"/>
-        </scene>
-        <!--payment_storyboard-->
-        <scene sceneID="Z1d-C0-I7Y">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Payment" referencedIdentifier="payment_storyboard" id="IX9-Pc-fXD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yfR-46-d8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1824" y="1084"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="EcW-ps-KES">
@@ -300,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE3-zO-zAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1291" y="700"/>
+            <point key="canvasLocation" x="-2252" y="1481"/>
         </scene>
         <!--Bản Đồ Dự Án-->
         <scene sceneID="mik-Pp-0Ig">
@@ -634,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="3469.5652173913045" y="555.80357142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Thông Tin Căn Hộ-->
         <scene sceneID="R0a-mL-stf">
             <objects>
-                <tabBarController id="qz2-L5-cFw" sceneMemberID="viewController">
+                <tabBarController title="Thông Tin Căn Hộ" id="qz2-L5-cFw" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mIG-FK-oCs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -660,6 +646,10 @@
         <image name="login_bacnkground" width="526" height="899"/>
         <image name="more_tab_icon" width="20" height="20"/>
         <image name="phone_icon" width="50" height="50"/>
+        <image name="project_icon" width="25" height="25"/>
         <image name="setting" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xbq-L3-4VC"/>
+    </inferredMetricsTieBreakers>
 </document>

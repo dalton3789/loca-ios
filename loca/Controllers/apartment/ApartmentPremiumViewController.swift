@@ -21,7 +21,6 @@ class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -38,8 +37,8 @@ class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UIT
         self.view.addSubview(viewBlank)
     
         if !isPremium{
-            //sharedAction.showPremiumAccountError(view: self, title: "Nâng Cấp Lên Premium Account", alert: "Tính năng chỉ dành riêng cho Premium Account", confirmAction: navigateToMain)
-             self.viewBlank.removeFromSuperview()
+            sharedAction.showPremiumAccountError(view: self, title: "Nâng Cấp Lên Premium Account", alert: "Tính năng chỉ dành riêng cho Premium Account", confirmAction: navigateToMain)
+            
             
         }else{
             self.viewBlank.removeFromSuperview()
