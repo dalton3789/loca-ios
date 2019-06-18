@@ -3,13 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C002E25CD16819030550E0 /* Pods_locaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5566A6AD12AB175F80F804F /* Pods_locaTests.framework */; };
 		1F1A0AE822AFA21600434692 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1A0AE722AFA21600434692 /* Payment.storyboard */; };
 		1F1A0AEB22AFA3A800434692 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A0AEA22AFA3A800434692 /* PaymentViewController.swift */; };
+		1F2FDF1F22B23D6D00C638CF /* UITableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2FDF1E22B23D6D00C638CF /* UITableExtension.swift */; };
+		1F9BEA1D22B8D39A00721785 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BEA1C22B8D39A00721785 /* SettingTableViewController.swift */; };
+		1F9BEA1F22B8D47800721785 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BEA1E22B8D47800721785 /* SettingTableViewCell.swift */; };
+		1F9BEA2622B8E3F900721785 /* ChangePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9BEA2522B8E3F900721785 /* ChangePasswordView.xib */; };
+		1F9BEA2922B8E62500721785 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BEA2822B8E62500721785 /* ChangePasswordViewController.swift */; };
 		1FCEEC7322AF53E000E1C1C8 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */; };
+		56375659840723CE03362C95 /* Pods_locaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732D432E0F120B54FB290438 /* Pods_locaUITests.framework */; };
+		E274AE7A733738A6C2D6A225 /* Pods_loca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7830C6ED15AC7FFD60A663 /* Pods_loca.framework */; };
 		E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA643229939DE000BF9D6 /* AppDelegate.swift */; };
 		E86FA646229939DE000BF9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FA645229939DE000BF9D6 /* ViewController.swift */; };
 		E86FA649229939DE000BF9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86FA647229939DE000BF9D6 /* Main.storyboard */; };
@@ -57,9 +65,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13F05A665F366A64BDD4F575 /* Pods-locaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locaTests.debug.xcconfig"; path = "Target Support Files/Pods-locaTests/Pods-locaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F1A0AE722AFA21600434692 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		1F1A0AEA22AFA3A800434692 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		1F2FDF1E22B23D6D00C638CF /* UITableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableExtension.swift; sourceTree = "<group>"; };
+		1F9BEA1C22B8D39A00721785 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		1F9BEA1E22B8D47800721785 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		1F9BEA2522B8E3F900721785 /* ChangePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordView.xib; sourceTree = "<group>"; };
+		1F9BEA2822B8E62500721785 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		1FCEEC7222AF53E000E1C1C8 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
+		4B43BC234C52B09BFE0CCC4B /* Pods-locaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locaUITests.release.xcconfig"; path = "Target Support Files/Pods-locaUITests/Pods-locaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		732D432E0F120B54FB290438 /* Pods_locaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B50312D34F5ACD5A7AAC1FB /* Pods-locaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locaUITests.debug.xcconfig"; path = "Target Support Files/Pods-locaUITests/Pods-locaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84483FF127DB39AAC993CBB7 /* Pods-loca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loca.debug.xcconfig"; path = "Target Support Files/Pods-loca/Pods-loca.debug.xcconfig"; sourceTree = "<group>"; };
+		AF7830C6ED15AC7FFD60A663 /* Pods_loca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CE664A4F37CCE34CF5DE19 /* Pods-locaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locaTests.release.xcconfig"; path = "Target Support Files/Pods-locaTests/Pods-locaTests.release.xcconfig"; sourceTree = "<group>"; };
 		E86FA640229939DE000BF9D6 /* loca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86FA643229939DE000BF9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E86FA645229939DE000BF9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +113,8 @@
 		E8F7B65422A22DA700463D13 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
 		E8F7B65622A232C400463D13 /* ApartmentPremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentPremiumViewController.swift; sourceTree = "<group>"; };
 		E8F7B65822A237F500463D13 /* ApartmentContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentContactTableViewCell.swift; sourceTree = "<group>"; };
+		EB3C8772046DC1B18B6E9D44 /* Pods-loca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loca.release.xcconfig"; path = "Target Support Files/Pods-loca/Pods-loca.release.xcconfig"; sourceTree = "<group>"; };
+		F5566A6AD12AB175F80F804F /* Pods_locaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E274AE7A733738A6C2D6A225 /* Pods_loca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C002E25CD16819030550E0 /* Pods_locaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56375659840723CE03362C95 /* Pods_locaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +163,62 @@
 			path = payment;
 			sourceTree = "<group>";
 		};
+		1F2FDF1D22B23D5200C638CF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1F2FDF1E22B23D6D00C638CF /* UITableExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1F9BEA1B22B8D38900721785 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1F9BEA1C22B8D39A00721785 /* SettingTableViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1F9BEA2022B8E0D300721785 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				1F9BEA2722B8E5FE00721785 /* New Group */,
+				1F9BEA2522B8E3F900721785 /* ChangePasswordView.xib */,
+				1F9BEA2822B8E62500721785 /* ChangePasswordViewController.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		1F9BEA2722B8E5FE00721785 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A633C094096919786D0FC9EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84483FF127DB39AAC993CBB7 /* Pods-loca.debug.xcconfig */,
+				EB3C8772046DC1B18B6E9D44 /* Pods-loca.release.xcconfig */,
+				13F05A665F366A64BDD4F575 /* Pods-locaTests.debug.xcconfig */,
+				B7CE664A4F37CCE34CF5DE19 /* Pods-locaTests.release.xcconfig */,
+				7B50312D34F5ACD5A7AAC1FB /* Pods-locaUITests.debug.xcconfig */,
+				4B43BC234C52B09BFE0CCC4B /* Pods-locaUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBC39C9DFB669F7B1710F19F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7830C6ED15AC7FFD60A663 /* Pods_loca.framework */,
+				F5566A6AD12AB175F80F804F /* Pods_locaTests.framework */,
+				732D432E0F120B54FB290438 /* Pods_locaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E86FA637229939DE000BF9D6 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +226,8 @@
 				E86FA65A229939DF000BF9D6 /* locaTests */,
 				E86FA665229939DF000BF9D6 /* locaUITests */,
 				E86FA641229939DE000BF9D6 /* Products */,
+				A633C094096919786D0FC9EA /* Pods */,
+				CBC39C9DFB669F7B1710F19F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +279,7 @@
 		E86FA67422993A68000BF9D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1F9BEA1B22B8D38900721785 /* Setting */,
 				1F1A0AE922AFA30C00434692 /* payment */,
 				E8F7B64B22A2180800463D13 /* apartment */,
 				E86FA677229940D3000BF9D6 /* Navigation Controllers */,
@@ -219,6 +303,7 @@
 		E86FA67C22994741000BF9D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1F2FDF1D22B23D5200C638CF /* Extension */,
 				E877E31A229E7B61002AB4B8 /* ServerCominucation.swift */,
 				E86FA67D2299475C000BF9D6 /* SharedActions.swift */,
 				E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */,
@@ -241,6 +326,7 @@
 		E8EAB76122A15575004534FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1F9BEA2022B8E0D300721785 /* UIView */,
 				E8F7B64A22A2170700463D13 /* UITableCells */,
 			);
 			path = Views;
@@ -253,6 +339,7 @@
 				E8F7B65022A2236300463D13 /* ApartmentDescriptionTableViewCell.swift */,
 				E8F7B65222A2284700463D13 /* ApartmentPhotosTableViewCell.swift */,
 				E8F7B65822A237F500463D13 /* ApartmentContactTableViewCell.swift */,
+				1F9BEA1E22B8D47800721785 /* SettingTableViewCell.swift */,
 			);
 			path = UITableCells;
 			sourceTree = "<group>";
@@ -273,9 +360,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E86FA66B229939DF000BF9D6 /* Build configuration list for PBXNativeTarget "loca" */;
 			buildPhases = (
+				7A3B368905EFED8EC415BA0D /* [CP] Check Pods Manifest.lock */,
 				E86FA63C229939DE000BF9D6 /* Sources */,
 				E86FA63D229939DE000BF9D6 /* Frameworks */,
 				E86FA63E229939DE000BF9D6 /* Resources */,
+				CB827DF60898C9B82FC2FF00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +379,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E86FA66E229939DF000BF9D6 /* Build configuration list for PBXNativeTarget "locaTests" */;
 			buildPhases = (
+				BE112C767B2A7DB449BDBC1D /* [CP] Check Pods Manifest.lock */,
 				E86FA653229939DF000BF9D6 /* Sources */,
 				E86FA654229939DF000BF9D6 /* Frameworks */,
 				E86FA655229939DF000BF9D6 /* Resources */,
@@ -308,6 +398,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E86FA671229939DF000BF9D6 /* Build configuration list for PBXNativeTarget "locaUITests" */;
 			buildPhases = (
+				11E69B371F290EF6975B2183 /* [CP] Check Pods Manifest.lock */,
 				E86FA65E229939DF000BF9D6 /* Sources */,
 				E86FA65F229939DF000BF9D6 /* Frameworks */,
 				E86FA660229939DF000BF9D6 /* Resources */,
@@ -374,6 +465,7 @@
 				E86FA64E229939DF000BF9D6 /* Assets.xcassets in Resources */,
 				E86FA649229939DE000BF9D6 /* Main.storyboard in Resources */,
 				1F1A0AE822AFA21600434692 /* Payment.storyboard in Resources */,
+				1F9BEA2622B8E3F900721785 /* ChangePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +485,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11E69B371F290EF6975B2183 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-locaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3B368905EFED8EC415BA0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-loca-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE112C767B2A7DB449BDBC1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-locaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB827DF60898C9B82FC2FF00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loca/Pods-loca-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loca/Pods-loca-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loca/Pods-loca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E86FA63C229939DE000BF9D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -410,9 +588,13 @@
 				E877E322229E80F1002AB4B8 /* Config.swift in Sources */,
 				E8E066A122A54B1C0094D3A7 /* LoginViewController.swift in Sources */,
 				E86FA64C229939DE000BF9D6 /* loca.xcdatamodeld in Sources */,
+				1F9BEA1F22B8D47800721785 /* SettingTableViewCell.swift in Sources */,
+				1F9BEA2922B8E62500721785 /* ChangePasswordViewController.swift in Sources */,
 				E8F7B65522A22DA700463D13 /* UserActions.swift in Sources */,
 				E86FA67B2299436B000BF9D6 /* ProjectListTableViewController.swift in Sources */,
+				1F9BEA1D22B8D39A00721785 /* SettingTableViewController.swift in Sources */,
 				E8F7B65122A2236300463D13 /* ApartmentDescriptionTableViewCell.swift in Sources */,
+				1F2FDF1F22B23D6D00C638CF /* UITableExtension.swift in Sources */,
 				E8F7B65322A2284700463D13 /* ApartmentPhotosTableViewCell.swift in Sources */,
 				E877E320229E7D6B002AB4B8 /* Project.swift in Sources */,
 				E8E066A322A555A00094D3A7 /* SignUpViewController.swift in Sources */,
@@ -594,6 +776,7 @@
 		};
 		E86FA66C229939DF000BF9D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84483FF127DB39AAC993CBB7 /* Pods-loca.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,6 +795,7 @@
 		};
 		E86FA66D229939DF000BF9D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3C8772046DC1B18B6E9D44 /* Pods-loca.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -630,6 +814,7 @@
 		};
 		E86FA66F229939DF000BF9D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F05A665F366A64BDD4F575 /* Pods-locaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -651,6 +836,7 @@
 		};
 		E86FA670229939DF000BF9D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7CE664A4F37CCE34CF5DE19 /* Pods-locaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -672,6 +858,7 @@
 		};
 		E86FA672229939DF000BF9D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B50312D34F5ACD5A7AAC1FB /* Pods-locaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -692,6 +879,7 @@
 		};
 		E86FA673229939DF000BF9D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B43BC234C52B09BFE0CCC4B /* Pods-locaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
