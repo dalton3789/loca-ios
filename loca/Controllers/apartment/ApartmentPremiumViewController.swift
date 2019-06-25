@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+import XLPagerTabStrip
+class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, IndicatorInfoProvider {
     
     
     
@@ -27,6 +27,11 @@ class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewWillAppear(_ animated: Bool) {
         checkPremiumAccout()
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        let itemInfo: IndicatorInfo = "Nâng Cao"
+        return itemInfo
     }
     
     func checkPremiumAccout(){

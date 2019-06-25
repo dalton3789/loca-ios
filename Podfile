@@ -18,5 +18,7 @@ target 'loca' do
   end
 
 pod 'PopupDialog', '~> 1.1'
+pod 'XLPagerTabStrip', '~> 9.0'
+pod 'ISHPullUp'
 
 end

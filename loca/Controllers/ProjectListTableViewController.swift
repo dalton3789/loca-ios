@@ -84,7 +84,7 @@ class ProjectListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "project_map" {
-            let vc = segue.destination as! MapViewController
+            let vc = segue.destination as! MainTabViewController
             vc.project = self.projects[selectedIndex]
         }
     }

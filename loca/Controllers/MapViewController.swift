@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import ISHPullUp
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDelegate {
     
     
     @IBOutlet weak var map: MKMapView!
@@ -23,6 +24,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var project = Project()
     var apartmentList = [Config.apartment]()
     let cIndicator = CustomIndicator()
+    var isHiddenBottom = true
+    var pullVC = ISHPullUpViewController()
     
 
     override func viewDidLoad() {
@@ -32,7 +35,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         cIndicator.startIndicator(timeout: 10.0)
         
         getApartmentFromProject()
-        
+        self.pullVC.setBottomHidden(false, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.showMoreActions(touch:)))
         tap.numberOfTapsRequired = 1
         view.addGestureRecognizer(tap)
@@ -107,8 +110,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     
     @objc func showMoreActions(touch: UITapGestureRecognizer) {
-        DynamicView.removeFromSuperview()
-        touchPoint = touch.location(in: self.view)
+        pullVC.setBottomHidden(true, animated: true)
     }
   
     final class MakerAnnotation: NSObject, MKAnnotation {
@@ -172,7 +174,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         self.view.addSubview(DynamicView)
  */
-        performSegue(withIdentifier: "map_detail", sender: self)
+       // performSegue(withIdentifier: "map_detail", sender: self)
+        hideBottom()
     }
     
     @objc func showMap(){
@@ -186,7 +189,22 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, update edgeInsets: UIEdgeInsets, forContentViewController contentVC: UIViewController) {
+        
+        contentVC.view.layoutMargins = .zero
+        pullVC = pullUpViewController
+        
+        // call layoutIfNeeded right away to participate in animations
+        // this method may be called from within animation blocks
+        self.view.layoutIfNeeded()
+    }
     
+    func hideBottom(){
+        isHiddenBottom = !isHiddenBottom
+        self.pullVC.setBottomHidden(false, animated: true)
+        
+        
+    }
 
 }
 

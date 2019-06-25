@@ -34,6 +34,8 @@
 		E877E320229E7D6B002AB4B8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E31F229E7D6B002AB4B8 /* Project.swift */; };
 		E877E322229E80F1002AB4B8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E321229E80F1002AB4B8 /* Config.swift */; };
 		E877E324229E8FA0002AB4B8 /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */; };
+		E8C1CB7522C25F0B0087EE35 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1CB7422C25F0B0087EE35 /* MainTabViewController.swift */; };
+		E8C1CB7722C260690087EE35 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1CB7622C260690087EE35 /* ParentViewController.swift */; };
 		E8E066A122A54B1C0094D3A7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E066A022A54B1C0094D3A7 /* LoginViewController.swift */; };
 		E8E066A322A555A00094D3A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E066A222A555A00094D3A7 /* SignUpViewController.swift */; };
 		E8E066A522A5587E0094D3A7 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E066A422A5587E0094D3A7 /* LoginNavigationController.swift */; };
@@ -102,6 +104,8 @@
 		E877E31F229E7D6B002AB4B8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		E877E321229E80F1002AB4B8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E877E323229E8FA0002AB4B8 /* CustomIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
+		E8C1CB7422C25F0B0087EE35 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		E8C1CB7622C260690087EE35 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		E8E066A022A54B1C0094D3A7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8E066A222A555A00094D3A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E8E066A422A5587E0094D3A7 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 		E86FA67422993A68000BF9D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8C1CB7322C25EEB0087EE35 /* TabBar */,
 				1F9BEA1B22B8D38900721785 /* Setting */,
 				1F1A0AE922AFA30C00434692 /* payment */,
 				E8F7B64B22A2180800463D13 /* apartment */,
@@ -315,6 +320,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E8C1CB7322C25EEB0087EE35 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E8C1CB7422C25F0B0087EE35 /* MainTabViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		E8EAB76122A15575004534FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +354,7 @@
 			children = (
 				E8F7B64C22A2183800463D13 /* ApartmentBasicViewController.swift */,
 				E8F7B65622A232C400463D13 /* ApartmentPremiumViewController.swift */,
+				E8C1CB7622C260690087EE35 /* ParentViewController.swift */,
 			);
 			path = apartment;
 			sourceTree = "<group>";
@@ -587,12 +601,14 @@
 				1F9BEA1D22B8D39A00721785 /* SettingTableViewController.swift in Sources */,
 				E8F7B65122A2236300463D13 /* ApartmentDescriptionTableViewCell.swift in Sources */,
 				1F2FDF1F22B23D6D00C638CF /* UITableExtension.swift in Sources */,
+				E8C1CB7522C25F0B0087EE35 /* MainTabViewController.swift in Sources */,
 				E8F7B65322A2284700463D13 /* ApartmentPhotosTableViewCell.swift in Sources */,
 				E877E320229E7D6B002AB4B8 /* Project.swift in Sources */,
 				E8E066A322A555A00094D3A7 /* SignUpViewController.swift in Sources */,
 				E86FA644229939DE000BF9D6 /* AppDelegate.swift in Sources */,
 				1F1A0AEB22AFA3A800434692 /* PaymentViewController.swift in Sources */,
 				E877E324229E8FA0002AB4B8 /* CustomIndicator.swift in Sources */,
+				E8C1CB7722C260690087EE35 /* ParentViewController.swift in Sources */,
 				E8F7B64F22A2189F00463D13 /* ApartmentBasicTableViewCell.swift in Sources */,
 				E877E31E229E7C7A002AB4B8 /* User.swift in Sources */,
 				E86FA67622993A78000BF9D6 /* MapViewController.swift in Sources */,

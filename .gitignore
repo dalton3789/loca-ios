@@ -66,3 +66,114 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+Podfile.lock
+Pods/Manifest.lock
+Pods/DynamicBlurView/LICENSE
+Pods/DynamicBlurView/README.md
+Pods/DynamicBlurView/DynamicBlurView/BlurLayer.swift
+Pods/DynamicBlurView/DynamicBlurView/CaptureQuality.swift
+Pods/DynamicBlurView/DynamicBlurView/CGContext+CGImage.swift
+Pods/DynamicBlurView/DynamicBlurView/CGImage+Accelerate.swift
+Pods/DynamicBlurView/DynamicBlurView/DynamicBlurView.h
+Pods/DynamicBlurView/DynamicBlurView/DynamicBlurView.swift
+Pods/DynamicBlurView/DynamicBlurView/TrackingMode.swift
+Pods/DynamicBlurView/DynamicBlurView/UIImage+Blur.swift
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/PopupDialog/LICENSE
+Pods/PopupDialog/README.md
+Pods/PopupDialog/PopupDialog/Classes/InteractiveTransition.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialog+Keyboard.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialog.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogButton.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogContainerView.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogDefaultButtons.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogDefaultView.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogDefaultViewController.swift
+Pods/PopupDialog/PopupDialog/Classes/PopupDialogOverlayView.swift
+Pods/PopupDialog/PopupDialog/Classes/PresentationController.swift
+Pods/PopupDialog/PopupDialog/Classes/PresentationManager.swift
+Pods/PopupDialog/PopupDialog/Classes/TransitionAnimations.swift
+Pods/PopupDialog/PopupDialog/Classes/TransitionAnimator.swift
+Pods/PopupDialog/PopupDialog/Classes/UIImageView+Calculations.swift
+Pods/PopupDialog/PopupDialog/Classes/UIView+Animations.swift
+Pods/PopupDialog/PopupDialog/Classes/UIViewController+Visibility.swift
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView-dummy.m
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView-Info.plist
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView-prefix.pch
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView-umbrella.h
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView.modulemap
+Pods/Target Support Files/DynamicBlurView/DynamicBlurView.xcconfig
+Pods/Target Support Files/Pods-loca/Pods-loca-acknowledgements.markdown
+Pods/Target Support Files/Pods-loca/Pods-loca-acknowledgements.plist
+Pods/Target Support Files/Pods-loca/Pods-loca-dummy.m
+Pods/Target Support Files/Pods-loca/Pods-loca-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-loca/Pods-loca-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-loca/Pods-loca-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-loca/Pods-loca-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-loca/Pods-loca-frameworks.sh
+Pods/Target Support Files/Pods-loca/Pods-loca-Info.plist
+Pods/Target Support Files/Pods-loca/Pods-loca-umbrella.h
+Pods/Target Support Files/Pods-loca/Pods-loca.debug.xcconfig
+Pods/Target Support Files/Pods-loca/Pods-loca.modulemap
+Pods/Target Support Files/Pods-loca/Pods-loca.release.xcconfig
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests-acknowledgements.plist
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests-dummy.m
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests-Info.plist
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests-umbrella.h
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests.debug.xcconfig
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests.modulemap
+Pods/Target Support Files/Pods-locaTests/Pods-locaTests.release.xcconfig
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests-acknowledgements.plist
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests-dummy.m
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests-Info.plist
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests-umbrella.h
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests.debug.xcconfig
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests.modulemap
+Pods/Target Support Files/Pods-locaUITests/Pods-locaUITests.release.xcconfig
+Pods/Target Support Files/PopupDialog/PopupDialog-dummy.m
+Pods/Target Support Files/PopupDialog/PopupDialog-Info.plist
+Pods/Target Support Files/PopupDialog/PopupDialog-prefix.pch
+Pods/Target Support Files/PopupDialog/PopupDialog-umbrella.h
+Pods/Target Support Files/PopupDialog/PopupDialog.modulemap
+Pods/Target Support Files/PopupDialog/PopupDialog.xcconfig
+Pods/ISHPullUp/LICENSE
+Pods/ISHPullUp/README.md
+Pods/ISHPullUp/ISHPullUp/ISHPullUpHandleView.h
+Pods/ISHPullUp/ISHPullUp/ISHPullUpHandleView.m
+Pods/ISHPullUp/ISHPullUp/ISHPullUpRoundedView.h
+Pods/ISHPullUp/ISHPullUp/ISHPullUpRoundedView.m
+Pods/ISHPullUp/ISHPullUp/ISHPullUpViewController.h
+Pods/ISHPullUp/ISHPullUp/ISHPullUpViewController.m
+Pods/Target Support Files/ISHPullUp/ISHPullUp-dummy.m
+Pods/Target Support Files/ISHPullUp/ISHPullUp-Info.plist
+Pods/Target Support Files/ISHPullUp/ISHPullUp-prefix.pch
+Pods/Target Support Files/ISHPullUp/ISHPullUp-umbrella.h
+Pods/Target Support Files/ISHPullUp/ISHPullUp.modulemap
+Pods/Target Support Files/ISHPullUp/ISHPullUp.xcconfig
+Pods/Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-XLPagerTabStrip-Info.plist
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip-dummy.m
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip-Info.plist
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip-umbrella.h
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap
+Pods/Target Support Files/XLPagerTabStrip/XLPagerTabStrip.xcconfig
+Pods/XLPagerTabStrip/LICENSE
+Pods/XLPagerTabStrip/README.md
+Pods/XLPagerTabStrip/Sources/BarPagerTabStripViewController.swift
+Pods/XLPagerTabStrip/Sources/BarView.swift
+Pods/XLPagerTabStrip/Sources/BaseButtonBarPagerTabStripViewController.swift
+Pods/XLPagerTabStrip/Sources/ButtonBarPagerTabStripViewController.swift
+Pods/XLPagerTabStrip/Sources/ButtonBarView.swift
+Pods/XLPagerTabStrip/Sources/ButtonBarViewCell.swift
+Pods/XLPagerTabStrip/Sources/ButtonCell.xib
+Pods/XLPagerTabStrip/Sources/FXPageControl.h
+Pods/XLPagerTabStrip/Sources/FXPageControl.m
+Pods/XLPagerTabStrip/Sources/IndicatorInfo.swift
+Pods/XLPagerTabStrip/Sources/PagerTabStripBehaviour.swift
+Pods/XLPagerTabStrip/Sources/PagerTabStripError.swift
+Pods/XLPagerTabStrip/Sources/PagerTabStripViewController.swift
+Pods/XLPagerTabStrip/Sources/SegmentedPagerTabStripViewController.swift
+Pods/XLPagerTabStrip/Sources/SwipeDirection.swift
+Pods/XLPagerTabStrip/Sources/TwitterPagerTabStripViewController.swift

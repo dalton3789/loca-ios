@@ -7,12 +7,10 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class ApartmentBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ApartmentBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, IndicatorInfoProvider {
 
-    
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     var dataList = [(image:UIImage,description:String)]()
@@ -47,6 +45,11 @@ class ApartmentBasicViewController: UIViewController, UITableViewDelegate, UITab
         tableView.delegate = self
         tableView.dataSource = self
         
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+       let itemInfo: IndicatorInfo = "Cơ Bản"
+        return itemInfo
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
