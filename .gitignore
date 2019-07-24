@@ -177,3 +177,106 @@ Pods/XLPagerTabStrip/Sources/PagerTabStripViewController.swift
 Pods/XLPagerTabStrip/Sources/SegmentedPagerTabStripViewController.swift
 Pods/XLPagerTabStrip/Sources/SwipeDirection.swift
 Pods/XLPagerTabStrip/Sources/TwitterPagerTabStripViewController.swift
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/SwiftMessages/LICENSE.md
+Pods/SwiftMessages/README.md
+Pods/SwiftMessages/SwiftMessages/AccessibleMessage.swift
+Pods/SwiftMessages/SwiftMessages/Animator.swift
+Pods/SwiftMessages/SwiftMessages/BackgroundViewable.swift
+Pods/SwiftMessages/SwiftMessages/BaseView.swift
+Pods/SwiftMessages/SwiftMessages/CALayer+Utils.swift
+Pods/SwiftMessages/SwiftMessages/CornerRoundingView.swift
+Pods/SwiftMessages/SwiftMessages/Error.swift
+Pods/SwiftMessages/SwiftMessages/Identifiable.swift
+Pods/SwiftMessages/SwiftMessages/KeyboardTrackingView.swift
+Pods/SwiftMessages/SwiftMessages/MarginAdjustable+Animation.swift
+Pods/SwiftMessages/SwiftMessages/MarginAdjustable.swift
+Pods/SwiftMessages/SwiftMessages/MaskingView.swift
+Pods/SwiftMessages/SwiftMessages/MessageView.swift
+Pods/SwiftMessages/SwiftMessages/NSBundle+Utils.swift
+Pods/SwiftMessages/SwiftMessages/NSLayoutConstraint+Utils.swift
+Pods/SwiftMessages/SwiftMessages/PassthroughView.swift
+Pods/SwiftMessages/SwiftMessages/PassthroughWindow.swift
+Pods/SwiftMessages/SwiftMessages/PhysicsAnimation.swift
+Pods/SwiftMessages/SwiftMessages/PhysicsPanHandler.swift
+Pods/SwiftMessages/SwiftMessages/Presenter.swift
+Pods/SwiftMessages/SwiftMessages/SwiftMessages.swift
+Pods/SwiftMessages/SwiftMessages/SwiftMessagesSegue.swift
+Pods/SwiftMessages/SwiftMessages/Theme.swift
+Pods/SwiftMessages/SwiftMessages/TopBottomAnimation.swift
+Pods/SwiftMessages/SwiftMessages/UIEdgeInsets+Utils.swift
+Pods/SwiftMessages/SwiftMessages/UIViewController+Utils.swift
+Pods/SwiftMessages/SwiftMessages/Weak.swift
+Pods/SwiftMessages/SwiftMessages/WindowViewController.swift
+Pods/SwiftMessages/SwiftMessages/Resources/CardView.xib
+Pods/SwiftMessages/SwiftMessages/Resources/CenteredView.xib
+Pods/SwiftMessages/SwiftMessages/Resources/errorIcon.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIcon@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIcon@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconLight.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconLight@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconLight@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconSubtle.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconSubtle@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/errorIconSubtle@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIcon.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIcon@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIcon@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconLight.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconLight@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconLight@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconSubtle.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconSubtle@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/infoIconSubtle@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/MessageView.xib
+Pods/SwiftMessages/SwiftMessages/Resources/StatusLine.xib
+Pods/SwiftMessages/SwiftMessages/Resources/successIcon.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIcon@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIcon@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconLight.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconLight@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconLight@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconSubtle.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconSubtle@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/successIconSubtle@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/TabView.xib
+Pods/SwiftMessages/SwiftMessages/Resources/warningIcon.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIcon@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIcon@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconLight.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconLight@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconLight@3x.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconSubtle.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconSubtle@2x.png
+Pods/SwiftMessages/SwiftMessages/Resources/warningIconSubtle@3x.png
+Pods/Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist
+Pods/Target Support Files/SwiftMessages/SwiftMessages-dummy.m
+Pods/Target Support Files/SwiftMessages/SwiftMessages-Info.plist
+Pods/Target Support Files/SwiftMessages/SwiftMessages-prefix.pch
+Pods/Target Support Files/SwiftMessages/SwiftMessages-umbrella.h
+Pods/Target Support Files/SwiftMessages/SwiftMessages.modulemap
+Pods/Target Support Files/SwiftMessages/SwiftMessages.xcconfig

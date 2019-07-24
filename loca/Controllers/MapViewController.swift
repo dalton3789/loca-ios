@@ -12,6 +12,7 @@ import ISHPullUp
 
 class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDelegate {
     
+    @IBOutlet weak var settings_icon: UIImageView!
     
     @IBOutlet weak var map: MKMapView!
     var touchPoint = CGPoint()
@@ -24,29 +25,65 @@ class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDe
     var project = Project()
     var apartmentList = [Config.apartment]()
     let cIndicator = CustomIndicator()
-    var isHiddenBottom = true
     var pullVC = ISHPullUpViewController()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cIndicator.addIndicator(view: self, alpha: 1.0)
         cIndicator.startIndicator(timeout: 10.0)
-        
         getApartmentFromProject()
-        self.pullVC.setBottomHidden(false, animated: true)
+        setupUI()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.pullVC.setBottomHidden(true, animated: true)
+    }
+    
+    func setupUI(){
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.showMoreActions(touch:)))
         tap.numberOfTapsRequired = 1
         view.addGestureRecognizer(tap)
+        settings_icon.layer.cornerRadius = 20
+    }
+    
+    @IBAction func toSettings(_ sender: UITapGestureRecognizer) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingTableViewController") as! SettingTableViewController
+        self.present(viewController, animated: true)
+        guard let nav = self.navigationController else {
+            print("Blank Nav")
+            return
+        }
         
+        nav.pushViewController(viewController, animated: true)
     }
     
     func getApartmentFromProject(){
+        
+        /*
         let link = Config.host + "/api/apartments?id=" + String(self.project.id)
         server.sendGETRequest(link: link, completionhandler: {data in
             self.getApartmentInfo(result: data)
         })
+ 
+        let link = Config.host + "/api/apartments?id=" + String(self.project.id)
+        LocaApartmentAPI.getApartment(link: link, completionHandler: <#T##(Data) -> ()#>)
+         */
+        var apartment = Config.apartment()
+        apartment.id = 1
+        apartment.legalStatus = "Dang ban"
+        apartment.longitude =  "106.720378"
+        apartment.latitude = "10.730040"
+        apartment.addressNumber = "23"
+        self.apartmentList.append(apartment)
+        
+        self.addMarker()
+        self.cIndicator.stopIndicator()
+        
+        
+        
+        
     }
     
     func addMarker(){
@@ -126,7 +163,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDe
             self.coordinate = coordinate
             self.title = title
             self.subtitle = subTitle
-            
             super.init()
         }
     
@@ -155,27 +191,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDe
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        /*
-        DynamicView = UIView(frame: CGRect(x: self.view.frame.width/3, y : touchPoint.y - 120, width: self.view.frame.width/2, height: 50.0))
-        DynamicView.backgroundColor = UIColor.lightGray
-        DynamicView.layer.cornerRadius = 10
-        DynamicView.layer.borderWidth = 1
-        
-        
-        let label = UILabel(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
-        selectedTittle = ((view.annotation?.title)!)!
-        label.text = "View Detail : " + selectedTittle
-        
-        
-        DynamicView.addSubview(label)
-        DynamicView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showMap)))
-        
-        
-        self.view.addSubview(DynamicView)
- */
-       // performSegue(withIdentifier: "map_detail", sender: self)
-        hideBottom()
+        self.pullVC.setBottomHidden(false, animated: true)
     }
     
     @objc func showMap(){
@@ -190,20 +206,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, ISHPullUpContentDe
     }
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, update edgeInsets: UIEdgeInsets, forContentViewController contentVC: UIViewController) {
-        
         contentVC.view.layoutMargins = .zero
         pullVC = pullUpViewController
-        
-        // call layoutIfNeeded right away to participate in animations
-        // this method may be called from within animation blocks
         self.view.layoutIfNeeded()
     }
     
     func hideBottom(){
-        isHiddenBottom = !isHiddenBottom
-        self.pullVC.setBottomHidden(false, animated: true)
-        
-        
+        self.pullVC.setBottomHidden(true, animated: true)
     }
 
 }

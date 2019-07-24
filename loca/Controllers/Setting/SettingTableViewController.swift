@@ -23,6 +23,7 @@ class SettingTableViewController: UITableViewController {
         dataList.append(settingList.init(icon: UIImage(named: "account_icon")!, descriptionInfo: "Thông Tin Tài Khoản"))
         dataList.append(settingList.init(icon: UIImage(named: "lock_icon")!, descriptionInfo: "Thay Đổi Password"))
         dataList.append(settingList.init(icon: UIImage(named: "account_icon")!, descriptionInfo: "Thong Tin Tai Khoan"))
+        dataList.append(settingList.init(icon: UIImage(), descriptionInfo: "Thoat"))
         
         tableView.reload(animationDirection: .down)
         
@@ -51,7 +52,12 @@ class SettingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showCustomDialog(animated: true)
+        switch indexPath.row {
+        case 3:
+            self.dismiss(animated: true, completion: {})
+        default:
+            showCustomDialog(animated: true)
+        }
     }
     
     
@@ -77,6 +83,7 @@ class SettingTableViewController: UITableViewController {
         let buttonTwo = DefaultButton(title: "XÁC NHẬN", height: 60) {
             if ratingVC.txt_reconfirmpass.text != ratingVC.txt_confirmpass.text {
                 self.showStandardDialog(title: "Password khong khop", subTitle: "Vui long nhap khop password moi")
+                
             }
         }
         

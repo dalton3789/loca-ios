@@ -28,9 +28,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController, ISHPullUpSizin
         //-
         super.viewDidLoad()
         
-        // buttonBarView.removeFromSuperview()
-        // navigationController?.navigationBar.addSubview(buttonBarView)
-        
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             

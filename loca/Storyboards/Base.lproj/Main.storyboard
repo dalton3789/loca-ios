@@ -30,12 +30,11 @@
                     </navigationBar>
                     <connections>
                         <outlet property="navigation" destination="gIY-lH-jGg" id="sz1-6Z-amM"/>
-                        <segue destination="inU-FQ-6Xh" kind="relationship" relationship="rootViewController" id="3tU-Uj-x1p"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5x-Vj-IOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-245" y="699"/>
+            <point key="canvasLocation" x="-222" y="828"/>
         </scene>
         <!--Danh Sách Dự Án-->
         <scene sceneID="5qP-LK-uFt">
@@ -63,30 +62,12 @@
                     <tabBarItem key="tabBarItem" title="Dự Án" image="project_icon" id="eT2-gZ-Ptj"/>
                     <navigationItem key="navigationItem" title="Danh Sách Dự Án" id="fqi-ou-md5"/>
                     <connections>
-                        <segue destination="inU-FQ-6Xh" kind="show" identifier="project_map" id="iNZ-ag-JbQ"/>
+                        <segue destination="xkp-sH-4YO" kind="show" identifier="project_mapNavi" id="CmX-Q9-bWd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc8-yG-cKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="1041"/>
-        </scene>
-        <!--LOCA-->
-        <scene sceneID="cAp-cZ-K9j">
-            <objects>
-                <tabBarController storyboardIdentifier="MainTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="inU-FQ-6Xh" customClass="MainTabViewController" customModule="loca" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="LOCA" id="2MK-Hx-JzK"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hey-RX-gVH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="YR9-FX-cRI" kind="relationship" relationship="viewControllers" id="cmS-0R-Bg1"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnT-rL-DLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1962" y="1041"/>
+            <point key="canvasLocation" x="1054" y="828"/>
         </scene>
         <!--Login Navigation Controller-->
         <scene sceneID="qQp-xm-Abi">
@@ -287,6 +268,23 @@
             </objects>
             <point key="canvasLocation" x="-2252" y="1481"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="3I7-Gs-Ddu">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xkp-sH-4YO" customClass="MapNavigationViewController" customModule="loca" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1uC-KC-F7m"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xzl-Ra-l34">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YR9-FX-cRI" kind="relationship" relationship="rootViewController" id="T0D-30-Apr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rs3-xx-coC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="828"/>
+        </scene>
         <!--Bản Đồ Dự Án-->
         <scene sceneID="mik-Pp-0Ig">
             <objects>
@@ -296,15 +294,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TJb-TB-e8G">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <imageView clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_icon" translatesAutoresizingMaskIntoConstraints="NO" id="3db-XP-fqy">
+                                <rect key="frame" x="344" y="88" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ULe-Tz-EGb"/>
+                                    <constraint firstAttribute="width" constant="40" id="aZ4-ST-tat"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hrt-zR-t48" appends="YES" id="hX3-q3-JFq"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="f8Y-9Z-sLS" firstAttribute="bottom" secondItem="TJb-TB-e8G" secondAttribute="bottom" id="9V8-Rm-paM"/>
-                            <constraint firstItem="f8Y-9Z-sLS" firstAttribute="trailing" secondItem="TJb-TB-e8G" secondAttribute="trailing" id="gha-Uj-Mqc"/>
-                            <constraint firstItem="TJb-TB-e8G" firstAttribute="top" secondItem="f8Y-9Z-sLS" secondAttribute="top" id="iBz-uJ-TQs"/>
-                            <constraint firstItem="TJb-TB-e8G" firstAttribute="leading" secondItem="f8Y-9Z-sLS" secondAttribute="leading" id="qIt-wS-YD1"/>
+                            <constraint firstItem="3db-XP-fqy" firstAttribute="top" secondItem="f8Y-9Z-sLS" secondAttribute="top" id="8I8-y9-kMm"/>
+                            <constraint firstAttribute="bottom" secondItem="TJb-TB-e8G" secondAttribute="bottom" id="9Nu-HQ-cyS"/>
+                            <constraint firstItem="TJb-TB-e8G" firstAttribute="leading" secondItem="f8Y-9Z-sLS" secondAttribute="leading" id="a8p-GN-Kfm"/>
+                            <constraint firstItem="TJb-TB-e8G" firstAttribute="trailing" secondItem="f8Y-9Z-sLS" secondAttribute="trailing" id="hlI-Mo-68B"/>
+                            <constraint firstItem="TJb-TB-e8G" firstAttribute="top" secondItem="evC-ML-7jX" secondAttribute="top" id="j1f-zm-YbG"/>
+                            <constraint firstItem="f8Y-9Z-sLS" firstAttribute="trailing" secondItem="3db-XP-fqy" secondAttribute="trailing" constant="30" id="le0-ni-WMr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f8Y-9Z-sLS"/>
                     </view>
@@ -319,11 +331,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="map" destination="TJb-TB-e8G" id="Ska-v0-gCG"/>
+                        <outlet property="settings_icon" destination="3db-XP-fqy" id="cjd-vD-4nG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTr-ck-D7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Hrt-zR-t48" userLabel="ToSetting">
+                    <connections>
+                        <action selector="toSettings:" destination="YR9-FX-cRI" id="iFC-7K-UET"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2862" y="751"/>
+            <point key="canvasLocation" x="2780" y="828"/>
         </scene>
         <!--Setting-->
         <scene sceneID="4Jm-Ob-Uxj">
@@ -380,7 +398,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJT-aI-RPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="1968"/>
+            <point key="canvasLocation" x="2861" y="1794"/>
         </scene>
         <!--Nâng Cao-->
         <scene sceneID="mNE-7q-KpL">
@@ -491,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57d-pm-dcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4451" y="1430"/>
+            <point key="canvasLocation" x="4593" y="1794"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="8cs-Bj-APB">
@@ -538,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-9B-DXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3580" y="1057"/>
+            <point key="canvasLocation" x="3694" y="828"/>
         </scene>
         <!--Cơ bản-->
         <scene sceneID="AMW-tM-wel">
@@ -664,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7d-BF-kgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4451" y="783"/>
+            <point key="canvasLocation" x="4594" y="828"/>
         </scene>
     </scenes>
     <resources>
@@ -676,9 +694,9 @@
         <image name="phone_icon" width="50" height="50"/>
         <image name="project_icon" width="25" height="25"/>
         <image name="setting" width="25" height="25"/>
+        <image name="settings_icon" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iNZ-ag-JbQ"/>
         <segue reference="Xbq-L3-4VC"/>
     </inferredMetricsTieBreakers>
 </document>

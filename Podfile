@@ -20,5 +20,6 @@ target 'loca' do
 pod 'PopupDialog', '~> 1.1'
 pod 'XLPagerTabStrip', '~> 9.0'
 pod 'ISHPullUp'
-
+pod 'Alamofire'
+pod 'SwiftMessages'
 end

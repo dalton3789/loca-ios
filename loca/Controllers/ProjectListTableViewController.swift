@@ -24,57 +24,25 @@ class ProjectListTableViewController: UITableViewController {
         cIndicator.addIndicator(view: self, alpha: 1.0)
         cIndicator.startIndicator(timeout: 10.0)
         getProjectsFromServer()
- 
-
+        
     }
     
     func getProjectsFromServer(){
-        
-        let link = Config.host + "/api/projects"
-        server.sendGETRequest(link: link, completionhandler: {data in
-            self.parseProjectData(result: data)
-            })
-        
-        
- 
+        //LocaProjectAPI.getProjectList(handler: {data in self.dataParsing(data: data) })
+        project.AddProject("Can 1", 1,"106.720196", "10.730591", "Phu My Hung", "Dao Tan", "Phu My Hung", "Phuong 7", "Quan 7", "Ho Chi Minh")
+        getProjects()
+        cIndicator.stopIndicator()
     }
     
-    func parseProjectData(result : String){
-        
-        let data = result.data(using: .utf8)!
+    func dataParsing(data: Data){
         do {
-            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
-            {
-                project.DeleteAllProject()
-                
-                for event in jsonArray {
-                    
-                    let name = event["name"] as! String
-                    let longitude = event["longitude"] as! String
-                    let id = event["id"] as! Int
-                    let latitude = event["latitude"] as! String
-                    let addressNumber = event["addressnumber"] as! String
-                    let area = event["addressarea"] as! String
-                    let ward = event["ward"] as! String
-                    let district = event["district"] as! String
-                    let city = event["city"] as! String
-                    let street = event["street"] as! String
-                    
-                    project.AddProject(name, id, longitude, latitude, addressNumber, street, area, ward, district, city)
-                }
-                
-                DispatchQueue.main.async{
-                    self.cIndicator.stopIndicator()
-                    self.getProjects()
-                }
-                
-            } else {
-                print("bad json")
-            }
-        } catch let error as NSError {
-            print(error)
+            let result = try JSONDecoder().decode(projectStruct.self, from: data)
+            project.DeleteAllProject()
+            project.AddProject(result.name, result.id, result.longitude, result.lattitude, result.addressNumber!, result.street!, result.area!, result.ward!, result.district!, result.city!)
+            getProjects()
+        } catch (let error) {
+            print(error.localizedDescription)
         }
-        
     }
     
     func getProjects(){
@@ -83,8 +51,8 @@ class ProjectListTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "project_map" {
-            let vc = segue.destination as! MainTabViewController
+        if segue.identifier == "project_mapNavi" {
+            let vc = segue.destination as! MapNavigationViewController
             vc.project = self.projects[selectedIndex]
         }
     }
@@ -114,7 +82,7 @@ class ProjectListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.selectedIndex = indexPath.row
-        performSegue(withIdentifier: "project_map", sender: self)
+        performSegue(withIdentifier: "project_mapNavi", sender: self)
         
     }
     

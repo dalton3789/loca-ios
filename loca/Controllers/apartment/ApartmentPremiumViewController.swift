@@ -42,9 +42,15 @@ class ApartmentPremiumViewController: UIViewController, UITableViewDelegate, UIT
         self.view.addSubview(viewBlank)
     
         if !isPremium{
-            sharedAction.showPremiumAccountError(view: self, title: "Nâng Cấp Lên Premium Account", alert: "Tính năng chỉ dành riêng cho Premium Account", confirmAction: navigateToMain)
-            
-            
+           // sharedAction.showPremiumAccountError(view: self, title: "Nâng Cấp Lên Premium Account", alert: "Tính năng chỉ dành riêng cho Premium Account", confirmAction: navigateToMain)
+            Message.displayToast("Tính năng chỉ dành riêng cho Premium Account", withTitle: "Error" , type: .error)
+
+            let popup = PopupDialogRequest.generateDialog(title: "Error", subTitle: "Nâng Cấp Lên Premium Account", okHandler: {}, cancelHandler: {})
+            guard let nav = self.navigationController else {
+                print("Empty")
+                return
+            }
+            nav.present(popup, animated: true)
         }else{
             self.viewBlank.removeFromSuperview()
         }
